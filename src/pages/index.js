@@ -45,7 +45,7 @@ export default function Home() {
         <div className="w-1/3">B</div>
 
         {/* Social icons */}
-        <div className="py-32 px-6 flex gap-4 text-5xl flex-col ">
+        <div className="py-32 px-16 flex gap-4 text-5xl flex-col ">
           {socialLinks.map((item, index) => (
             <div key={index}>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
