@@ -7,6 +7,7 @@ import { TiSocialLinkedin } from "react-icons/ti";
 import { TiSocialYoutube } from "react-icons/ti";
 import { IoMail } from "react-icons/io5";
 import { FaDiscord } from "react-icons/fa";
+
 import Animatedbg from "./Animatedbg";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,7 @@ export default function Home() {
   ];
   return (
     <main
-      className={`flex font-mono text-gray-400 px-10 py-4 items-center justify-center ${inter.className}`}
+      className={`flex font-mono text-gray-400  px-10 py-4 items-center justify-center ${inter.className}`}
     >
       <div className="flex w-full h-full">
         {/* Profile Section (Sidebar) */}
@@ -35,7 +36,7 @@ export default function Home() {
               width={250}
               height={250}
               alt="Picture of the author"
-              className="rounded shadow shadow-gray-300 hover:shadow-sm"
+              className="rounded-full shadow shadow-gray-300 hover:shadow-sm"
             />
           </div>
           <p className="uppercase font-mono py-1">Swarnnika Raj SIngh</p>
@@ -50,6 +51,19 @@ export default function Home() {
         {/* Animated Background Section (Center) */}
         <div className="flex justify-center items-center w-3/4">
           <Animatedbg />
+        </div>
+
+        <div className="flex absolute  bottom-2 left-2 right-2  items-center justify-center">
+          <div className="flex gap-4 text-xl font-mono">
+            <div className="underline cursor-pointer">Profile</div>
+            <div className="underline cursor-pointer">Skills</div>
+            <div className="underline cursor-pointer">Work Experince</div>
+            <div className="underline cursor-pointer">Projects</div>
+            <div className="underline cursor-pointer">Contact</div>
+            <div className="underline cursor-pointer">Courses</div>
+            <div className="underline cursor-pointer">Blogs</div>
+            <div className="underline cursor-pointer">My gears</div>
+          </div>
         </div>
 
         {/* Social Icons Section (Floating Bar on Right) */}
