@@ -38,7 +38,7 @@ export default function Home() {
               className="rounded shadow shadow-gray-300 hover:shadow-sm"
             />
           </div>
-          <p className="uppercase font-mono py-2">Swarnnika Raj SIngh</p>
+          <p className="uppercase font-mono py-1">Swarnnika Raj SIngh</p>
           <p className="uppercase font-mono py-2">Full stack Developer</p>
           <div className="font-mono max-w-60 py-2">
             Passionate full-stack developer skilled in end-to-end project
