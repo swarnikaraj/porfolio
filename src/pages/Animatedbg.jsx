@@ -48,15 +48,13 @@ function GridPlaneWithCards() {
         return (
           <Html key={i} position={[x, y, z]} center>
             <div
-              className="bg-gray-400 w-32 h-32 text-gray-800 rounded-full shadow shadow-gray-100 p-4 "
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
+              className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-400 shadow shadow-gray-100 animate-spin duration-300" /* Adjust duration as needed */
             >
-              <div>{data.icon}</div>
-              <div>{data.text}</div>
+              <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-transparent rounded-full"></div>
+              <div className="flex flex-col items-center justify-center p-4 text-gray-800 z-10">
+                <div>{data.icon}</div>
+                <div>{data.text}</div>
+              </div>
             </div>
           </Html>
         );
