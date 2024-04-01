@@ -17,7 +17,7 @@ const Header = () => {
           <a href="#" className="nav-link">
             Projects
           </a>
-          <a href="#" className="nav-link">
+          <a href="https://swarnnika.hashnode.dev/" className="nav-link">
             Blog
           </a>
           <a href="#" className="nav-link">
@@ -25,6 +25,9 @@ const Header = () => {
           </a>
           <a href="#" className="nav-link">
             Contact
+          </a>
+          <a href="#" className="nav-link">
+            Resume
           </a>
           <div className="flex items-center space-x-4 mt-4 lg:mt-0">
             <a href="https://github.com/swarnikaraj" className="social-icon">
