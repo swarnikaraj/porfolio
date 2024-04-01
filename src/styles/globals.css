@@ -32,13 +32,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #1F2544;
 }
 
 @layer utilities {
@@ -52,7 +46,8 @@ body {
 
 
 .bg-night-sky {
-  background-image: url('/starry-night-sky.jpg'); 
+  /* background-image: url('/starry-night-sky.jpg');  */
+  border-color: rgba(40, 10, 96, 0.4);
 }
 
 .bg-night-sky-animation {

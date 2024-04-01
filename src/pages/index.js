@@ -5,7 +5,7 @@ import Pointer from "./Pointer";
 import { SlSocialGithub } from "react-icons/sl";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { TiSocialYoutube } from "react-icons/ti";
-import { IoMail } from "react-icons/io5";
+
 import { FaDiscord } from "react-icons/fa";
 import Profile from "./Profile";
 import Animatedbg from "./Animatedbg";
@@ -13,21 +13,13 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import Work from "./Work";
 import NightLayout from "./Night";
+import Header from "./Header";
+import HeroSection from "./Hero";
+import ProjectSection from "./Project";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [selectedSection, setSelectedSection] = useState({});
-
-  const socialLinks = [
-    { Icon: SlSocialGithub, link: "https://github.com/swarnikaraj" },
-    {
-      Icon: TiSocialLinkedin,
-      link: "https://linkedin.com/in/swarnnika-raj-singh-a6731914b/",
-    },
-    { Icon: IoMail, link: "mailto:swarnikarajsingh@example.com" },
-    { Icon: FaDiscord, link: "https://discordapp.com/yourusername" },
-    { Icon: TiSocialYoutube, link: "https://youtube.com/swarnnikarajsingh" },
-  ];
 
   const cardData = useMemo(
     () => [
@@ -39,65 +31,25 @@ export default function Home() {
     []
   );
   return (
-    <NightLayout>
-      <main
-        className={`flex   flex-col justify-center items-center ${inter.className}`}
-      >
-        <div className=" w-full text-teal-600 z-20 py-8 flex items-center justify-center      ">
-          <div className="flex  w-full px-4 fixed  flex-row-reverse gap-4 text-xl font-mono">
-            <div className="underline cursor-pointer">Profile</div>
-            <div className="underline cursor-pointer">Skills</div>
-            <div className="underline cursor-pointer">Work Experince</div>
-            <div className="underline cursor-pointer">Projects</div>
-            <div className="underline cursor-pointer">Contact</div>
-            <div className="underline cursor-pointer">Courses</div>
-            <a href="https://swarnnika.hashnode.dev/">
-              <div className="underline cursor-pointer">Blogs</div>
-            </a>
-          </div>
+    <main
+      className={`flex items-center justify-center bg-[#1F2544]  ${inter.className}`}
+    >
+      <div className="px-4 w-full">
+        <Header />
+        <div className="lg:px-28 md:px-24 px-4 flex items-center justify-center">
+          <HeroSection />
         </div>
-        <div
-          className={`flex font-mono text-gray-400  px-10 py-4 items-center justify-center`}
-        >
-          <div className="lg:flex xl:flex w-full z-20 ">
-            {/* Profile Section (Sidebar) */}
-            {selectedSection?.text == "Profile" && <Profile />}
-            {selectedSection?.text == "Projects" && <Projects />}
-            {selectedSection?.text == "Skills" && <Skills />}
-            {selectedSection?.text == "Work Experience" && <Work />}
-
-            {/* Animated Background Section (Center) */}
-            <div
-              style={{ width: "70vw" }}
-              className="flex justify-center  items-center   "
-            >
-              <Animatedbg
-                cardData={cardData}
-                setSelectedSection={setSelectedSection}
-                selectedSection={selectedSection}
-              />
-            </div>
-
-            {/* Social Icons Section (Floating Bar on Right) */}
-            <div className="  flex flex-col  px-4 gap-3 items-center justify-center  ">
-              {socialLinks.map((item, index) => (
-                <div key={index} className="">
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    <item.Icon className="text-gray-400 text-5xl hover:text-white" />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="lg:px-28 md:px-24 px-4 flex items-center justify-center">
+          <ProjectSection />
         </div>
-        <Pointer />
-        <div className="py-2 text-sm text-gray-500  z-20  ">
+
+        <div className="py-4 border-t border-gray-600 text-sm text-gray-500  z-20  ">
           <div className="flex items-center justify-center">
             © Copyright {new Date().getFullYear()} - Developed by Swarnnika Raj
             Singh. All right reserved
           </div>
         </div>
-      </main>
-    </NightLayout>
+      </div>
+    </main>
   );
 }
