@@ -1,25 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 const ProjectSection = () => {
-  // Sample project data
-  const projects = [
-    {
-      title: "Project 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "project1.jpg",
-      demoLink: "#",
-      codeLink: "#",
-    },
-    {
-      title: "Project 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "project2.jpg",
-      demoLink: "#",
-      codeLink: "#",
-    },
-    // Add more projects as needed
-  ];
-
   return (
     <section className=" py-10">
       <div className="px-4 pb-10">

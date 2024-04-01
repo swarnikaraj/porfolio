@@ -1,18 +1,7 @@
 import * as THREE from "three";
 import { useMemo, useState } from "react";
 import { Inter } from "next/font/google";
-import Pointer from "./Pointer";
-import { SlSocialGithub } from "react-icons/sl";
-import { TiSocialLinkedin } from "react-icons/ti";
-import { TiSocialYoutube } from "react-icons/ti";
 
-import { FaDiscord } from "react-icons/fa";
-import Profile from "./Profile";
-import Animatedbg from "./Animatedbg";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import Work from "./Work";
-import NightLayout from "./Night";
 import Header from "./Header";
 import HeroSection from "./Hero";
 import ProjectSection from "./Project";
