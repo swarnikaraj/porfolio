@@ -1,8 +1,8 @@
 import Image from "next/image";
 const Profile = () => {
   return (
-    <div className="flex lg:w-1/3 w-full mid:w-1/3 flex-col items-center px-2 border-blue-800  border-l border-t border-b ">
-      <p className=" uppercase text-2xl">Profile</p>
+    <div className="flex h-full overflow-y-auto lg:w-1/3 w-full mid:w-1/3 flex-col items-center px-2 border-blue-800  border-l border-t border-b ">
+      <p className="py-2 text-2xl uppercase">Profile</p>
       <div className="relative">
         <Image
           src="https://media.licdn.com/dms/image/D5603AQHm5qVEZ2seeA/profile-displayphoto-shrink_800_800/0/1711647686431?e=1717632000&v=beta&t=BdU-0WhUXWPPM1LV4F33B-5ZhAEnoId9vSXNs43UFSY"

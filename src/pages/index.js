@@ -39,23 +39,26 @@ export default function Home() {
     []
   );
   return (
-    <main className={` ${inter.className}`}>
-      <div className="  items-center justify-center">
-        <div className="flex p-4 w-full  fixed z-20 flex-row-reverse gap-4 text-xl font-mono">
+    <main
+      className={`flex flex-col bg-[rgba(0,0,0)] justify-center items-center ${inter.className}`}
+    >
+      <div className=" w-full z-20 py-8 flex items-center justify-center      ">
+        <div className="flex  w-full px-4 fixed  flex-row-reverse gap-4 text-xl font-mono">
           <div className="underline cursor-pointer">Profile</div>
           <div className="underline cursor-pointer">Skills</div>
           <div className="underline cursor-pointer">Work Experince</div>
           <div className="underline cursor-pointer">Projects</div>
           <div className="underline cursor-pointer">Contact</div>
           <div className="underline cursor-pointer">Courses</div>
-          <div className="underline cursor-pointer">Blogs</div>
-          <div className="underline cursor-pointer">My gears</div>
+          <a href="https://swarnnika.hashnode.dev/">
+            <div className="underline cursor-pointer">Blogs</div>
+          </a>
         </div>
       </div>
       <div
         className={`flex font-mono text-gray-400  px-10 py-4 items-center justify-center`}
       >
-        <div className="lg:flex xl:flex w-full h-full">
+        <div className="lg:flex xl:flex w-full ">
           {/* Profile Section (Sidebar) */}
           {selectedSection?.text == "Profile" && <Profile />}
           {selectedSection?.text == "Projects" && <Projects />}
@@ -63,7 +66,10 @@ export default function Home() {
           {selectedSection?.text == "Work Experience" && <Work />}
 
           {/* Animated Background Section (Center) */}
-          <div className="flex justify-center items-center  lg:w-3/4 md:w-3/4 w-full">
+          <div
+            style={{ width: "70vw" }}
+            className="flex justify-center  items-center   "
+          >
             <Animatedbg
               cardData={cardData}
               setSelectedSection={setSelectedSection}
@@ -72,7 +78,7 @@ export default function Home() {
           </div>
 
           {/* Social Icons Section (Floating Bar on Right) */}
-          <div className="py-8 flex flex-col  px-4 gap-3 items-center justify-center  ">
+          <div className="  flex flex-col  px-4 gap-3 items-center justify-center  ">
             {socialLinks.map((item, index) => (
               <div key={index} className="">
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -84,9 +90,11 @@ export default function Home() {
         </div>
       </div>
       <Pointer />
-      <div className="py-2 flex items-center justify-center">
-        © Copyright {new Date().getFullYear()} - Developed by Swarnnika Raj
-        Singh. All right reserved
+      <div className="py-2 text-sm text-gray-500  z-20  ">
+        <div className="flex items-center justify-center">
+          © Copyright {new Date().getFullYear()} - Developed by Swarnnika Raj
+          Singh. All right reserved
+        </div>
       </div>
     </main>
   );

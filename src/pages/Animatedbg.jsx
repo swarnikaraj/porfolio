@@ -63,6 +63,25 @@ function GridPlaneWithCards({ cardData, selectedSection, setSelectedSection }) {
                 <div className="text-xl font-bold">{data.text}</div>
               </div>
             </div>
+            {/* 
+            <div
+              onClick={() => setSelectedSection(data)}
+              className={`relative w-64 h-64 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-105 overflow-hidden ${
+                selectedSection?.text == data.text
+                  ? "animate-spin duration-900"
+                  : ""
+              }`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-purple-500 opacity-70 rounded-lg"></div>
+              <div className="absolute inset-0 flex justify-center items-center">
+                <div className="text-center">
+                  <h2 className="text-white text-2xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 bg-clip-text">
+                    {data.icon}
+                  </h2>
+                  <p className="text-white mt-2">{data.text}</p>
+                </div>
+              </div>
+            </div> */}
           </Html>
         );
       })}
@@ -77,7 +96,7 @@ function Animatedbg({
   setSelectedComponent,
 }) {
   return (
-    <Canvas style={{ height: "100vh", width: "100vw" }}>
+    <Canvas className="w-full">
       <ambientLight intensity={0.5} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <GridPlaneWithCards

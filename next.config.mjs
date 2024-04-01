@@ -6,6 +6,12 @@ const nextConfig = {
       {
         hostname: "media.licdn.com",
       },
+      {
+        hostname: "tse1.mm.bing.net",
+      },
+      {
+        hostname: "logowik.com",
+      },
     ],
   },
 };
