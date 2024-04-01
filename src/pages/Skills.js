@@ -17,7 +17,7 @@ const Skills = () => {
     "Redis",
   ];
   return (
-    <div className="flex h-full overflow-y-auto lg:w-1/3 w-full mid:w-1/3 flex-col items-center px-2 border-blue-800  border-l border-t border-b ">
+    <div className="flex h-full overflow-y-auto lg:w-1/3 w-full mid:w-1/3 flex-col items-center px-2 border-teal-600  border-l border-t border-b ">
       <p className="py-2 text-2xl uppercase">Techstacks & Skillset</p>
       <div className="flex flex-wrap gap-2">
         {skillsset.map((d, index) => (

@@ -31,7 +31,7 @@ const ProjectCard = ({
       <div className="px-6 py-2">
         <a
           href={liveLink}
-          className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+          className="inline-block bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded mr-2"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -52,7 +52,7 @@ const ProjectCard = ({
 
 const Projects = () => {
   return (
-    <div className="flex overflow-y-auto lg:w-1/3 w-full mid:w-1/3 flex-col items-center px-2 border-blue-800 border-l border-t border-b max-h-[calc(2*300px)]">
+    <div className="flex overflow-y-auto lg:w-1/3 w-full mid:w-1/3 flex-col items-center px-2 border-teal-600 border-l border-t border-b max-h-[calc(2*300px)]">
       <p className="py-2 text-2xl uppercase">Projects</p>
       <div className="flex flex-col gap-4">
         <ProjectCard
