@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <main className={` ${inter.className}`}>
       <div className="  items-center justify-center">
-        <div className="flex p-4 flex-row-reverse gap-4 text-xl font-mono">
+        <div className="flex p-4 w-full  fixed z-20 flex-row-reverse gap-4 text-xl font-mono">
           <div className="underline cursor-pointer">Profile</div>
           <div className="underline cursor-pointer">Skills</div>
           <div className="underline cursor-pointer">Work Experince</div>
