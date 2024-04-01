@@ -42,7 +42,7 @@ export default function Home() {
     <main
       className={`flex flex-col bg-[rgba(0,0,0)] justify-center items-center ${inter.className}`}
     >
-      <div className=" w-full z-20 py-8 flex items-center justify-center      ">
+      <div className=" w-full text-teal-600 z-20 py-8 flex items-center justify-center      ">
         <div className="flex  w-full px-4 fixed  flex-row-reverse gap-4 text-xl font-mono">
           <div className="underline cursor-pointer">Profile</div>
           <div className="underline cursor-pointer">Skills</div>

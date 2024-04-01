@@ -31,7 +31,7 @@ function GridPlaneWithCards({ cardData, selectedSection, setSelectedSection }) {
         <planeGeometry args={[15, 15, 15, 15]} />
         {/* Custom material to create a mesh-like appearance */}
         <meshBasicMaterial
-          color="blue" // Set color to grey
+          color="teal" // Set color to grey
           wireframe // Enable wireframe mode
           wireframeLinewidth={1} // Set wireframe line thickness
           side={THREE.DoubleSide} // Ensure it's visible from both sides
