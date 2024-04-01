@@ -1,4 +1,3 @@
-// components/Pointer.js
 import { useEffect, useState } from "react";
 
 export default function Pointer() {
@@ -15,6 +14,16 @@ export default function Pointer() {
 
     return () => {
       document.removeEventListener("mousemove", updateCursorPos);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Hide scrollbar on mount
+    document.body.style.overflowX = "hidden";
+
+    // Restore scrollbar on unmount
+    return () => {
+      document.body.style.overflowX = "";
     };
   }, []);
 

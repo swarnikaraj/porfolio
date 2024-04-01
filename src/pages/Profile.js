@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Profile = () => {
   return (
-    <div className="flex w-1/3 flex-col items-center px-2 border-blue-800  border-l border-t border-b ">
+    <div className="flex lg:w-1/3 w-full mid:w-1/3 flex-col items-center px-2 border-blue-800  border-l border-t border-b ">
       <p className=" uppercase text-2xl">Profile</p>
       <div className="relative">
         <Image

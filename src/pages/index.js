@@ -39,51 +39,55 @@ export default function Home() {
     []
   );
   return (
-    <main
-      className={`flex font-mono text-gray-400  px-10 py-4 items-center justify-center ${inter.className}`}
-    >
-      <div className="flex w-full h-full">
-        {/* Profile Section (Sidebar) */}
-        {selectedSection?.text == "Profile" && <Profile />}
-        {selectedSection?.text == "Projects" && <Projects />}
-        {selectedSection?.text == "Skills" && <Skills />}
-        {selectedSection?.text == "Work Experience" && <Work />}
-
-        {/* Animated Background Section (Center) */}
-        <div className="flex justify-center items-center w-3/4">
-          <Animatedbg
-            cardData={cardData}
-            setSelectedSection={setSelectedSection}
-            selectedSection={selectedSection}
-          />
-        </div>
-
-        <div className="flex absolute  bottom-2 left-2 right-2  items-center justify-center">
-          <div className="flex gap-4 text-xl font-mono">
-            <div className="underline cursor-pointer">Profile</div>
-            <div className="underline cursor-pointer">Skills</div>
-            <div className="underline cursor-pointer">Work Experince</div>
-            <div className="underline cursor-pointer">Projects</div>
-            <div className="underline cursor-pointer">Contact</div>
-            <div className="underline cursor-pointer">Courses</div>
-            <div className="underline cursor-pointer">Blogs</div>
-            <div className="underline cursor-pointer">My gears</div>
-          </div>
-        </div>
-
-        {/* Social Icons Section (Floating Bar on Right) */}
-        <div className="py-8 flex flex-col  px-4 gap-3 items-center justify-center  ">
-          {socialLinks.map((item, index) => (
-            <div key={index} className="">
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <item.Icon className="text-gray-400 text-5xl hover:text-white" />
-              </a>
-            </div>
-          ))}
+    <main className={` ${inter.className}`}>
+      <div className="  items-center justify-center">
+        <div className="flex p-4 flex-row-reverse gap-4 text-xl font-mono">
+          <div className="underline cursor-pointer">Profile</div>
+          <div className="underline cursor-pointer">Skills</div>
+          <div className="underline cursor-pointer">Work Experince</div>
+          <div className="underline cursor-pointer">Projects</div>
+          <div className="underline cursor-pointer">Contact</div>
+          <div className="underline cursor-pointer">Courses</div>
+          <div className="underline cursor-pointer">Blogs</div>
+          <div className="underline cursor-pointer">My gears</div>
         </div>
       </div>
+      <div
+        className={`flex font-mono text-gray-400  px-10 py-4 items-center justify-center`}
+      >
+        <div className="lg:flex xl:flex w-full h-full">
+          {/* Profile Section (Sidebar) */}
+          {selectedSection?.text == "Profile" && <Profile />}
+          {selectedSection?.text == "Projects" && <Projects />}
+          {selectedSection?.text == "Skills" && <Skills />}
+          {selectedSection?.text == "Work Experience" && <Work />}
 
+          {/* Animated Background Section (Center) */}
+          <div className="flex justify-center items-center  lg:w-3/4 md:w-3/4 w-full">
+            <Animatedbg
+              cardData={cardData}
+              setSelectedSection={setSelectedSection}
+              selectedSection={selectedSection}
+            />
+          </div>
+
+          {/* Social Icons Section (Floating Bar on Right) */}
+          <div className="py-8 flex flex-col  px-4 gap-3 items-center justify-center  ">
+            {socialLinks.map((item, index) => (
+              <div key={index} className="">
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <item.Icon className="text-gray-400 text-5xl hover:text-white" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <Pointer />
+      <div className="py-2 flex items-center justify-center">
+        © Copyright {new Date().getFullYear()} - Developed by Swarnnika Raj
+        Singh. All right reserved
+      </div>
     </main>
   );
 }
