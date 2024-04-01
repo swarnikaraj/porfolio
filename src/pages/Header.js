@@ -26,7 +26,8 @@ const Header = () => {
           <a href="#contact" className="nav-link">
             Contact
           </a>
-          <a href="#" className="nav-link">
+
+          <a href="/Swarnnika-Resume.pdf" target="_blank" className="nav-link">
             Resume
           </a>
           <div className="flex items-center space-x-4 mt-4 lg:mt-0">

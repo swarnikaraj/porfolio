@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ title, description, link }) => {
   return (
-    <div className=" p-4 border border-solid border-[#FC6736] border-t-0 border-l-0 rounded-lg">
+    <div className=" p-4 shadow-lg border-[#FC6736] border-t-0 border-l-0 rounded-lg">
       <h3 className="text-xl font-semibold mb-1 text-gray-500">{title}</h3>
       <p className="text-gray-700 mb-2">{description}</p>
       <a href={link} className="text-teal-600 hover:underline">
@@ -47,10 +47,19 @@ const Fun = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      {cards.map((card, index) => (
-        <Card key={index} {...card} />
-      ))}
+    <div>
+      <div className=" pb-10">
+        <h2 className="text-3xl font-bold pb-2 text-left text-[#FC6736]">
+          __Follow me
+        </h2>
+        <p className="text-xl text-[#FFD0EC]"></p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {cards.map((card, index) => (
+          <Card key={index} {...card} />
+        ))}
+      </div>
     </div>
   );
 };

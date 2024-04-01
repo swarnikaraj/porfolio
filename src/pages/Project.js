@@ -7,7 +7,7 @@ const ProjectSection = () => {
         <h2 className="text-3xl font-bold pb-2 text-left text-[#FC6736]">
           __Projects
         </h2>
-        <p className="text-xl text-[#FFD0EC]">Check out my cool projects</p>
+        {/* <p className="text-xl text-[#FFD0EC]">Check out my cool projects</p> */}
       </div>
 
       <div className="container ">
