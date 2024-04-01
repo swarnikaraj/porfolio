@@ -11,8 +11,8 @@ const HeroSection = () => {
               <div>I&apos;m Swarnnika</div>
             </h1>
             <p className="text-lg md:text-xl mb-8">
-              I&apos;m a Full-Stack Developer passionate about full-stack
-              developement skilled in end-to-end project development and
+              I&apos;m a Full-Stack Developer passionate about programming &
+              techtacks. Experienced in end-to-end project development and
               deployment. Known for agility with new technologies and innovative
               problem-solving.
             </p>
