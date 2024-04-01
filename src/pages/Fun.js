@@ -35,9 +35,9 @@ const Fun = () => {
       link: "https://opensea.io/0xCffbF030F0d41009EfD6800AA56FB9C8d9F5EEf2",
     },
     {
-      title: "Checkout my Memes",
-      description: "Have a laugh with my collection of memes.",
-      link: "/memes",
+      title: "Checkout my fun",
+      description: "Have a laugh with my collection of memes, reels and quotes",
+      link: "https://www.instagram.com/swarnika.eth",
     },
     {
       title: "Follow me on Twitter",
