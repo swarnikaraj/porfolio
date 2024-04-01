@@ -21,14 +21,14 @@ export default function Home() {
   );
   return (
     <main
-      className={`flex items-center justify-center bg-[#1F2544]  ${inter.className}`}
+      className={`flex items-center justify-center bg-[#161A30]  ${inter.className}`}
     >
-      <div className="px-4 w-full">
+      <div className="px-4 w-full lg:px-20 md:px-20 ">
         <Header />
-        <div className="lg:px-28 md:px-24 px-4 flex items-center justify-center">
+        <div className=" flex items-center justify-center">
           <HeroSection />
         </div>
-        <div className="lg:px-28 md:px-24 px-4 flex items-center justify-center">
+        <div className=" flex items-center justify-center">
           <ProjectSection />
         </div>
 

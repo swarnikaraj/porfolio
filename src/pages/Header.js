@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 const Header = () => {
   return (
-    <header className="bg-[#1F2544]   text-white py-4">
+    <header className="bg-[#161A30]   text-white py-4">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
         <div className="text-2xl font-bold mb-4 lg:mb-0">
           <span className="text-[#FC6736] ">S</span>warnnika{" "}

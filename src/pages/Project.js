@@ -3,14 +3,14 @@ import ProjectCard from "./ProjectCard";
 const ProjectSection = () => {
   return (
     <section className=" py-10">
-      <div className="px-4 pb-10">
-        <h2 className="text-3xl font-bold text-left text-[#FC6736]">
+      <div className=" pb-10">
+        <h2 className="text-3xl font-bold pb-2 text-left text-[#FC6736]">
           __Projects
         </h2>
         <p className="text-xl text-[#FFD0EC]">Check out my cool projects</p>
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
             projectName={"Video Transcoder"}
