@@ -14,16 +14,16 @@ const Header = () => {
           <a href="#" className="nav-link">
             Home
           </a>
-          <a href="#" className="nav-link">
+          <a href="#projects" className="nav-link">
             Projects
           </a>
           <a href="https://swarnnika.hashnode.dev/" className="nav-link">
             Blog
           </a>
-          <a href="#" className="nav-link">
+          {/* <a href="#" className="nav-link">
             Courses
-          </a>
-          <a href="#" className="nav-link">
+          </a> */}
+          <a href="#contact" className="nav-link">
             Contact
           </a>
           <a href="#" className="nav-link">

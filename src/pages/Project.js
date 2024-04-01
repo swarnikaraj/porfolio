@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 const ProjectSection = () => {
   return (
-    <section className=" py-10">
+    <section className=" py-10" id="projects">
       <div className=" pb-10">
         <h2 className="text-3xl font-bold pb-2 text-left text-[#FC6736]">
           __Projects
