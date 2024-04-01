@@ -1,9 +1,15 @@
-import React, { useRef } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useMemo,
+} from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { OrbitControls, Html } from "@react-three/drei";
 
-function GridPlaneWithCards() {
+function GridPlaneWithCards({ cardData, selectedSection, setSelectedSection }) {
   const planeRef = useRef();
 
   const numCards = 4;
@@ -11,15 +17,9 @@ function GridPlaneWithCards() {
   const planeDistance = 5; // Adjust the distance of the plane from the camera
   const initialRotationAngle = -Math.PI / 4;
 
-  const cardData = [
-    { text: "Profile", icon: "👤" },
-
-    { text: "Skills", icon: "🛠️" },
-
-    { text: "Projects", icon: "💻" },
-    { text: "Work Experience", icon: "💼" },
-  ];
-
+  useEffect(() => {
+    setSelectedSection(cardData[0]);
+  }, [cardData, setSelectedSection]);
   return (
     <>
       {/* Grid Plane with initial rotation */}
@@ -31,7 +31,7 @@ function GridPlaneWithCards() {
         <planeGeometry args={[15, 15, 15, 15]} />
         {/* Custom material to create a mesh-like appearance */}
         <meshBasicMaterial
-          color="grey" // Set color to grey
+          color="blue" // Set color to grey
           wireframe // Enable wireframe mode
           wireframeLinewidth={1} // Set wireframe line thickness
           side={THREE.DoubleSide} // Ensure it's visible from both sides
@@ -48,12 +48,19 @@ function GridPlaneWithCards() {
         return (
           <Html key={i} position={[x, y, z]} center>
             <div
-              className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-400 shadow shadow-gray-100 animate-spin duration-300" /* Adjust duration as needed */
+              onClick={() => {
+                setSelectedSection(data);
+              }}
+              className={`relative w-32 h-32 rounded-full overflow-hidden bg-gray-400 shadow shadow-gray-100 ${
+                selectedSection?.text == data.text
+                  ? "animate-spin duration-900"
+                  : ""
+              }`}
             >
               <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-transparent rounded-full"></div>
               <div className="flex flex-col items-center justify-center p-4 text-gray-800 z-10">
-                <div>{data.icon}</div>
-                <div>{data.text}</div>
+                <div className="text-xl">{data.icon}</div>
+                <div className="text-xl font-bold">{data.text}</div>
               </div>
             </div>
           </Html>
@@ -63,12 +70,21 @@ function GridPlaneWithCards() {
   );
 }
 
-function Animatedbg() {
+function Animatedbg({
+  cardData,
+  setSelectedSection,
+  selectedSection,
+  setSelectedComponent,
+}) {
   return (
     <Canvas style={{ height: "100vh", width: "100vw" }}>
       <ambientLight intensity={0.5} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-      <GridPlaneWithCards />
+      <GridPlaneWithCards
+        cardData={cardData}
+        setSelectedSection={setSelectedSection}
+        selectedSection={selectedSection}
+      />
       <OrbitControls />
     </Canvas>
   );

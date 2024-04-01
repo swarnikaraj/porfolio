@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import Image from "next/image";
+import { useMemo, useState } from "react";
 import { Inter } from "next/font/google";
 import Pointer from "./Pointer";
 import { SlSocialGithub } from "react-icons/sl";
@@ -7,11 +7,17 @@ import { TiSocialLinkedin } from "react-icons/ti";
 import { TiSocialYoutube } from "react-icons/ti";
 import { IoMail } from "react-icons/io5";
 import { FaDiscord } from "react-icons/fa";
-
+import Profile from "./Profile";
 import Animatedbg from "./Animatedbg";
+import Projects from "./Projects";
+import Skills from "./Skills";
+import Work from "./Work";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [selectedSection, setSelectedSection] = useState({});
+
   const socialLinks = [
     { Icon: SlSocialGithub, link: "https://github.com/swarnikaraj" },
     {
@@ -22,35 +28,34 @@ export default function Home() {
     { Icon: FaDiscord, link: "https://discordapp.com/yourusername" },
     { Icon: TiSocialYoutube, link: "https://youtube.com/swarnnikarajsingh" },
   ];
+
+  const cardData = useMemo(
+    () => [
+      { text: "Profile", icon: "👤" },
+      { text: "Skills", icon: "🛠️" },
+      { text: "Projects", icon: "💻" },
+      { text: "Work Experience", icon: "💼" },
+    ],
+    []
+  );
   return (
     <main
       className={`flex font-mono text-gray-400  px-10 py-4 items-center justify-center ${inter.className}`}
     >
       <div className="flex w-full h-full">
         {/* Profile Section (Sidebar) */}
-        <div className="flex w-1/3 flex-col items-center px-2 uppercase border-l border-t border-b ">
-          <p className="uppercase text-2xl">Profile</p>
-          <div className="relative">
-            <Image
-              src="https://media.licdn.com/dms/image/D5603AQHm5qVEZ2seeA/profile-displayphoto-shrink_800_800/0/1711647686431?e=1717632000&v=beta&t=BdU-0WhUXWPPM1LV4F33B-5ZhAEnoId9vSXNs43UFSY"
-              width={250}
-              height={250}
-              alt="Picture of the author"
-              className="rounded-full shadow shadow-gray-300 hover:shadow-sm"
-            />
-          </div>
-          <p className="uppercase font-mono py-1">Swarnnika Raj SIngh</p>
-          <p className="uppercase font-mono py-2">Full stack Developer</p>
-          <div className="font-mono max-w-60 py-2">
-            Passionate full-stack developer skilled in end-to-end project
-            development and deployment. Known for agility with new technologies
-            and innovative problem-solving.
-          </div>
-        </div>
+        {selectedSection?.text == "Profile" && <Profile />}
+        {selectedSection?.text == "Projects" && <Projects />}
+        {selectedSection?.text == "Skills" && <Skills />}
+        {selectedSection?.text == "Work Experience" && <Work />}
 
         {/* Animated Background Section (Center) */}
         <div className="flex justify-center items-center w-3/4">
-          <Animatedbg />
+          <Animatedbg
+            cardData={cardData}
+            setSelectedSection={setSelectedSection}
+            selectedSection={selectedSection}
+          />
         </div>
 
         <div className="flex absolute  bottom-2 left-2 right-2  items-center justify-center">
