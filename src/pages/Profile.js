@@ -22,7 +22,7 @@ const Profile = () => {
       <p className="font-mono py-2 text-lg text-teal-600">
         Fullstack Developer
       </p>
-      <div className="font-mono max-w-md py-2 text-lg text-center text-gray-700">
+      <div className="font-mono max-w-md py-2 text-lg text-center text-gray-400">
         Passionate full-stack developer skilled in end-to-end project
         development and deployment. Known for agility with new technologies and
         innovative problem-solving.

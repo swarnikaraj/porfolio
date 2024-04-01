@@ -46,3 +46,30 @@ body {
     text-wrap: balance;
   }
 }
+
+
+
+
+
+.bg-night-sky {
+  background-image: url('/starry-night-sky.jpg'); 
+}
+
+.bg-night-sky-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /* Twice the width of the container to create seamless loop */
+  height: 100%;
+  background-image: inherit;
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move the background to the left by 50% of its width */
+  }
+}

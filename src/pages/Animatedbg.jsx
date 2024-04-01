@@ -8,6 +8,7 @@ import React, {
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { OrbitControls, Html } from "@react-three/drei";
+import NightLayout from "./Night";
 
 function GridPlaneWithCards({ cardData, selectedSection, setSelectedSection }) {
   const planeRef = useRef();
@@ -31,9 +32,9 @@ function GridPlaneWithCards({ cardData, selectedSection, setSelectedSection }) {
         <planeGeometry args={[15, 15, 15, 15]} />
         {/* Custom material to create a mesh-like appearance */}
         <meshBasicMaterial
-          color="teal" // Set color to grey
-          wireframe // Enable wireframe mode
-          wireframeLinewidth={1} // Set wireframe line thickness
+          color="teal"
+          wireframe
+          wireframeLinewidth={1}
           side={THREE.DoubleSide} // Ensure it's visible from both sides
         />
       </mesh>
@@ -43,7 +44,7 @@ function GridPlaneWithCards({ cardData, selectedSection, setSelectedSection }) {
         const angle = (i / numCards) * Math.PI * 2;
         const x = Math.cos(angle) * radius;
         const z = Math.sin(angle) * radius;
-        const y = 1.2; // Adjust the height of the cards above the plane
+        const y = 1.2;
 
         return (
           <Html key={i} position={[x, y, z]} center>
@@ -63,25 +64,6 @@ function GridPlaneWithCards({ cardData, selectedSection, setSelectedSection }) {
                 <div className="text-xl font-bold">{data.text}</div>
               </div>
             </div>
-            {/* 
-            <div
-              onClick={() => setSelectedSection(data)}
-              className={`relative w-64 h-64 bg-white rounded-lg shadow-lg transform transition duration-300 hover:scale-105 overflow-hidden ${
-                selectedSection?.text == data.text
-                  ? "animate-spin duration-900"
-                  : ""
-              }`}
-            >
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-purple-500 opacity-70 rounded-lg"></div>
-              <div className="absolute inset-0 flex justify-center items-center">
-                <div className="text-center">
-                  <h2 className="text-white text-2xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 bg-clip-text">
-                    {data.icon}
-                  </h2>
-                  <p className="text-white mt-2">{data.text}</p>
-                </div>
-              </div>
-            </div> */}
           </Html>
         );
       })}
