@@ -33,7 +33,10 @@ export default function Home() {
         <div className=" flex items-center justify-center">
           <ProjectSection />
         </div>
-        <Fun />
+        <div className="py-10 flex items-center justify-center">
+          <Fun />
+        </div>
+
         <ContactSection />
         <div className="py-4 border-t border-gray-600 text-sm text-gray-500  z-20  ">
           <div className="flex items-center justify-center">

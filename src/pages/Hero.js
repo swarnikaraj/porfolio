@@ -36,7 +36,7 @@ const HeroSection = () => {
               alt="Profile Picture"
               width={450}
               height={450}
-              className="mx-auto shadow-lg md:mx-0  rounded-full"
+              className="mx-auto shadow-lg md:mx-0  rounded-full border-8 border-l-0 border-t-0 border-teal-600"
             />
           </div>
         </div>

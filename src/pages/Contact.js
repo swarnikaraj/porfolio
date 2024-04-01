@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const ContactSection = () => {
   return (
-    <section className=" text-white py-20" id="contact">
+    <section className=" text-white py-10" id="contact">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
