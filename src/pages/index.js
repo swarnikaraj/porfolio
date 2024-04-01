@@ -21,9 +21,10 @@ export default function Home() {
     ],
     []
   );
+  // bg col #161A30
   return (
     <main
-      className={`flex items-center justify-center bg-[#161A30]  ${inter.className}`}
+      className={`flex items-center justify-center bg-[#111]  ${inter.className}`}
     >
       <div className="px-4 w-full lg:px-20 md:px-20 ">
         <Header />

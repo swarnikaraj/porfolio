@@ -6,8 +6,9 @@ const ProjectCard = ({
   githubLink,
   techStacks,
 }) => {
+  //bg-[#293050]
   return (
-    <div className=" rounded overflow-hidden shadow-lg bg-[#293050]">
+    <div className=" rounded overflow-hidden hover:shadow-sm shadow-lg bg-[#181818]">
       <Image
         width={300}
         height={100}
