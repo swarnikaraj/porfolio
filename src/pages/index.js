@@ -12,15 +12,6 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [selectedSection, setSelectedSection] = useState({});
 
-  const cardData = useMemo(
-    () => [
-      { text: "Profile", icon: "👤" },
-      { text: "Skills", icon: "🛠️" },
-      { text: "Projects", icon: "💻" },
-      { text: "Work Experience", icon: "💼" },
-    ],
-    []
-  );
   // bg col #161A30
   return (
     <main

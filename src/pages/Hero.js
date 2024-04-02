@@ -23,12 +23,6 @@ const HeroSection = () => {
             >
               View Projects
             </a>
-            {/* <a
-              href="#contact"
-              className="bg-transparent hover:bg-gray-600 text-gray-300 font-semibold py-2 px-6 rounded-md border border-gray-300"
-            >
-              Contact Me
-            </a> */}
           </div>
           <div className="text-center md:text-right  flex items-center justify-center">
             <Image
