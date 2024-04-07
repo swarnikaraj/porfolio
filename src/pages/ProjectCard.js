@@ -5,10 +5,24 @@ const ProjectCard = ({
   liveLink,
   githubLink,
   techStacks,
+  opensource,
+  monetized,
 }) => {
   //bg-[#293050]
   return (
-    <div className=" rounded overflow-hidden hover:shadow-sm shadow-lg bg-[#181818]">
+    <div className="relative rounded overflow-hidden hover:shadow-sm shadow-lg bg-[#181818]">
+      {opensource && (
+        <div className="absolute top-0 right-0 bg-green-500 text-white font-bold py-1 px-2 rounded-br">
+          Open Source
+        </div>
+      )}
+
+      {monetized && (
+        <div className="absolute top-0 right-0 bg-green-500 text-white font-bold py-1 px-2 rounded-br">
+          Commercialized
+        </div>
+      )}
+
       <Image
         width={300}
         height={100}

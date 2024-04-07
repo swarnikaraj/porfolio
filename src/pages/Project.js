@@ -13,6 +13,7 @@ const ProjectSection = () => {
       <div className="container ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <ProjectCard
+            opensource={true}
             projectName={"Video Transcoder"}
             githubLink={"https://github.com/swarnikaraj/videocall"}
             imageSrc={"/videotranscode.jpg"}
@@ -28,6 +29,7 @@ const ProjectSection = () => {
             liveLink={"https://github.com/swarnikaraj/videocall"}
           />
           <ProjectCard
+            opensource={false}
             projectName={"Vercel Clone"}
             githubLink={"https://github.com/swarnikaraj/vercel-clone"}
             imageSrc={"/vercel.jpg"}
@@ -43,17 +45,26 @@ const ProjectSection = () => {
             liveLink={"https://vercel-clone-lake.vercel.app/"}
           />
           <ProjectCard
-            projectName={"Multiuser Video calling"}
+            opensource={false}
+            projectName={"Multi-User Video Calling"}
             githubLink={"https://github.com/swarnikaraj/videocall"}
             imageSrc={"/videocalling.jpg"}
             techStacks={["WebRTC", "Nodejs", "Reactjs", "Websocket"]}
             liveLink={"https://github.com/swarnikaraj/videocall"}
           />
           <ProjectCard
-            projectName={"Nft Minting dapp"}
+            opensource={false}
+            monetized={true}
+            projectName={"NFT Minting Dapp"}
             githubLink={"https://github.com/swarnikaraj/videocall"}
             imageSrc={"/nftapp.jpg"}
-            techStacks={["Reactjs", "Solidity", "Ethers.js"]}
+            techStacks={[
+              "Reactjs",
+              "Solidity",
+              "Ethers.js",
+              "Metamask",
+              "ERC-721A",
+            ]}
             liveLink={"https://bb-mint-new.vercel.app/"}
           />
         </div>
