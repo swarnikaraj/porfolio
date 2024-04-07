@@ -15,38 +15,46 @@ const ProjectSection = () => {
           <ProjectCard
             projectName={"Video Transcoder"}
             githubLink={"https://github.com/swarnikaraj/videocall"}
-            imageSrc={
-              "https://tse1.mm.bing.net/th?id=OIP.vzym19RQDmYfN5wrWUDrUgHaEK&pid=Api&P=0&h=180"
-            }
-            techStacks={["Reactjs", "WebRTC", "Nodejs", "Docker"]}
+            imageSrc={"/videotranscode.jpg"}
+            techStacks={[
+              "Golang",
+              "AWS Lambda",
+              "AWS Queue",
+              "Docker",
+              "AWS ECS",
+              "Event driven",
+              "Nextjs",
+            ]}
             liveLink={"https://github.com/swarnikaraj/videocall"}
           />
           <ProjectCard
             projectName={"Vercel Clone"}
+            githubLink={"https://github.com/swarnikaraj/vercel-clone"}
+            imageSrc={"/vercel.jpg"}
+            techStacks={[
+              "Nodejs",
+              "AWS ECS",
+              "Reactjs",
+              "Redis",
+              "EventDriven",
+              "Redis",
+              "Websocket",
+            ]}
+            liveLink={"https://vercel-clone-lake.vercel.app/"}
+          />
+          <ProjectCard
+            projectName={"Multiuser Video calling"}
             githubLink={"https://github.com/swarnikaraj/videocall"}
-            imageSrc={
-              "https://logowik.com/content/uploads/images/vercel1868.jpg"
-            }
-            techStacks={["Reactjs", "Nodejs", "Golang"]}
+            imageSrc={"/videocalling.jpg"}
+            techStacks={["WebRTC", "Nodejs", "Reactjs", "Websocket"]}
             liveLink={"https://github.com/swarnikaraj/videocall"}
           />
           <ProjectCard
-            projectName={"GMeet Clone"}
+            projectName={"Nft Minting dapp"}
             githubLink={"https://github.com/swarnikaraj/videocall"}
-            imageSrc={
-              "https://tse1.mm.bing.net/th?id=OIP.vzym19RQDmYfN5wrWUDrUgHaEK&pid=Api&P=0&h=180"
-            }
-            techStacks={["Reactjs", "WebRTC", "Nodejs"]}
-            liveLink={"https://github.com/swarnikaraj/videocall"}
-          />
-          <ProjectCard
-            projectName={"GMeet Clone"}
-            githubLink={"https://github.com/swarnikaraj/videocall"}
-            imageSrc={
-              "https://tse1.mm.bing.net/th?id=OIP.vzym19RQDmYfN5wrWUDrUgHaEK&pid=Api&P=0&h=180"
-            }
-            techStacks={["Reactjs", "WebRTC", "Nodejs"]}
-            liveLink={"https://github.com/swarnikaraj/videocall"}
+            imageSrc={"/nftapp.jpg"}
+            techStacks={["Reactjs", "Solidity", "Ethers.js"]}
+            liveLink={"https://bb-mint-new.vercel.app/"}
           />
         </div>
       </div>

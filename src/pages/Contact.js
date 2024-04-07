@@ -6,6 +6,9 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
+            {/* <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 via-fuchsia-500 to-orange-300 text-transparent bg-clip-text ">
+              Get in Touch
+            </h2> */}
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Get in Touch
             </h2>
