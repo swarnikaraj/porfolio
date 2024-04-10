@@ -54,7 +54,6 @@ const ProjectSection = () => {
           />
           <ProjectCard
             opensource={false}
-            monetized={true}
             projectName={"NFT Minting Dapp"}
             githubLink={"https://github.com/swarnikaraj/videocall"}
             imageSrc={"/nftapp.jpg"}
