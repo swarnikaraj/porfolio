@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+import Link from "next/link";
 const Header = () => {
   //bg-[#161A30]
   return (
@@ -12,9 +13,9 @@ const Header = () => {
           <span className="text-[#FC6736] ">S</span>ingh
         </div>
         <nav className="flex gap-4 flex-wrap justify-center lg:justify-end items-center">
-          <a href="#" className="nav-link">
+          <Link href="/" className="nav-link">
             Home
-          </a>
+          </Link>
           <a href="#projects" className="nav-link">
             Projects
           </a>

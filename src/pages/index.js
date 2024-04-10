@@ -7,6 +7,7 @@ import HeroSection from "./Hero";
 import ProjectSection from "./Project";
 import ContactSection from "./Contact";
 import Fun from "./Fun";
+import Footer from "./Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -30,12 +31,7 @@ export default function Home() {
         </div>
 
         <ContactSection />
-        <div className="py-4 border-t border-gray-600 text-sm text-gray-500  z-20  ">
-          <div className="flex items-center justify-center">
-            © Copyright {new Date().getFullYear()} - Developed by Swarnnika Raj
-            Singh. All right reserved
-          </div>
-        </div>
+        <Footer />
       </div>
     </main>
   );

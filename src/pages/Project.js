@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import Link from "next/link";
 const ProjectSection = () => {
   return (
     <section className=" py-10" id="projects">
@@ -38,8 +39,8 @@ const ProjectSection = () => {
               "AWS ECS",
               "Reactjs",
               "Redis",
-              "EventDriven",
-              "Redis",
+              "Event driven",
+              "Docker",
               "Websocket",
             ]}
             liveLink={"https://vercel-clone-lake.vercel.app/"}
@@ -67,6 +68,11 @@ const ProjectSection = () => {
             liveLink={"https://bb-mint-new.vercel.app/"}
           />
         </div>
+      </div>
+      <div className=" font-bold py-2 text-right text-[#FC6736] cursor-pointer">
+        <Link href="/projects">
+          <p>_More</p>
+        </Link>
       </div>
     </section>
   );
