@@ -27,10 +27,13 @@ const ProjectSection = () => {
           ))}
         </div>
       </div>
-      <div className=" font-bold py-2 text-right text-[#FC6736] cursor-pointer">
-        <Link href="/projects">
-          <p>_More</p>
-        </Link>
+      <div className="flex flex-row-reverse">
+        <button
+          disabled={true}
+          className="disabled:opacity-50 disabled:cursor-not-allowed text-xl font-bold py-2 text-right text-[#FC6736] cursor-pointer"
+        >
+          _More
+        </button>
       </div>
     </section>
   );

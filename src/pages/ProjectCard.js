@@ -48,6 +48,7 @@ const ProjectCard = ({
       <div className="px-6 py-2">
         <button
           disabled={opensource}
+          onClick={() => window.open(liveLink, "_blank")}
           href={liveLink}
           className="inline-block hover:bg-[#FC6736] disabled:bg-slate-400 bg-teal-700  text-white font-bold py-2 px-4 rounded mr-2"
           target="_blank"
