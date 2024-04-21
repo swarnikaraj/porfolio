@@ -16,7 +16,7 @@ export const projects = [
       "AWS ECS",
       "Event driven",
     ],
-    liveLink: "https://github.com/swarnikaraj/videocall",
+    liveLink: "https://github.com/swarnikaraj/videotranscoder12",
   },
   {
     description:
@@ -47,7 +47,7 @@ export const projects = [
   {
     opensource: false,
     projectName: "NFT Minting Dapp",
-    githubLink: "https://github.com/swarnikaraj/videocall",
+    githubLink: "https://github.com/swarnikaraj/BBMintNew",
     imageSrc: "/nftapp.jpg",
     techStacks: ["Reactjs", "Solidity", "Ethers.js", "Metamask", "ERC-721A"],
     liveLink: "https://bb-mint-new.vercel.app/",
