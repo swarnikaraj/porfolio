@@ -4,7 +4,7 @@ export const projects = [
       "A video transcoder that can transcode video to different formats. It uses AWS Lambda, AWS ECS, AWS S3, and Docker to run the transcoding process.",
     opensource: true,
     projectName: "Video Transcoder",
-    githubLink: "https://github.com/swarnikaraj/videocall",
+    githubLink: "https://github.com/swarnikaraj/videotranscoder12",
     imageSrc: "/videotranscode.jpg",
     techStacks: [
       "Golang",
