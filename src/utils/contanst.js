@@ -20,7 +20,7 @@ export const projects = [
   },
   {
     description:
-      "A clone of the Vercel website that uses React, Nextjs, and AWS ECS to deploy the website.",
+      "A clone of the Vercel website that build and deploye simple static frontend applications",
     opensource: false,
     projectName: "Vercel Clone",
     githubLink: "https://github.com/swarnikaraj/vercel-clone",
