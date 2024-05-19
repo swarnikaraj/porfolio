@@ -27,7 +27,7 @@ const Fun = () => {
     {
       title: "Connect on LinkedIn",
       description: "Let's connect and explore professional opportunities.",
-      link: "nkedin.com/in/swarnnika-raj-singh-a6731914b/",
+      link: "nkedin.com/in/swarnnika",
     },
     {
       title: "Check out my NFTs",

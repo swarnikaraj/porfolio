@@ -37,7 +37,7 @@ const Header = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/swarnnika-raj-singh-a6731914b/"
+              href="https://linkedin.com/in/swarnnika"
               className="social-icon"
             >
               <FaLinkedin />
