@@ -36,13 +36,10 @@ const Header = () => {
             <a href="https://github.com/swarnikaraj" className="social-icon">
               <FaGithub />
             </a>
-            <a
-              href="https://linkedin.com/in/swarnnika"
-              className="social-icon"
-            >
+            <a href="https://linkedin.com/in/swarnnika" className="social-icon">
               <FaLinkedin />
             </a>
-            <a href="#" className="social-icon">
+            <a href="https://x.com/_flammingo" className="social-icon">
               <FaTwitter />
             </a>
 
