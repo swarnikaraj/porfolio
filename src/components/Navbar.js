@@ -22,6 +22,7 @@ const Navbar = () => {
     { name: "Skills", href: "#skills" },
     { name: "Art", href: "#art" },
     { name: "Contact", href: "#contact" },
+    { name: "Blogs", href: "https://swarnnika.hashnode.dev/" },
   ];
 
   return (

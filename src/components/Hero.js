@@ -80,6 +80,11 @@ const Hero = () => {
       ref={containerRef}
       className="min-h-screen relative overflow-hidden bg-[#0a0a0a] flex flex-col items-center justify-center py-20 px-4"
     >
+      {/* Gradient Background */}
+      {/* <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-b from-purple-500/10 via-pink-500/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-t from-blue-500/10 via-purple-500/10 to-transparent rounded-full blur-3xl"></div>
+      </div> */}
       {/* Star Background */}
       <div className="absolute inset-0 pointer-events-none">
         {stars.map((star) => (
