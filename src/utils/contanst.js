@@ -109,7 +109,7 @@ export const caseStudies = [
       "Instant provisioning with a connection string handed back in seconds, and a platform designed to scale horizontally as tenant count grows.",
     lessons:
       "Isolation guarantees are worth paying for early — retrofitting them into a shared system later is far more expensive than the infrastructure cost of dedicated tenancy.",
-    githubLink: null,
+    githubLink: "https://github.com/swarnikaraj/swarndb-sdk",
   },
   {
     id: "video-transcoder",
@@ -171,6 +171,26 @@ export const caseStudies = [
       "Real-time systems should be designed around the failure path first — the happy path is the easy 80%.",
     githubLink: "https://github.com/swarnikaraj/videocall",
   },
+  {
+    id: "gentuber",
+    title: "GenTuber — AI Growth Tools for YouTube Creators",
+    summary:
+      "A live SaaS platform giving YouTube creators AI-powered analytics, SEO optimization, multilingual voiceovers, and competitor analysis — co-built and shipped to paying users.",
+    stack: ["Next.js", "AI/LLM Integration", "Multilingual Pipelines", "SaaS Billing"],
+    problem:
+      "Creators lose growth to disconnected tooling — content ideation, SEO, voiceovers, and analytics each require separate paid tools, most of which don't support Indian and regional languages.",
+    architecture:
+      "A Next.js frontend backed by AI pipelines for script generation, SEO metadata, voiceover/dubbing, and competitor analysis, unified behind a single subscription product with tiered plans.",
+    challenges:
+      "Supporting multilingual generation (English, Hindi, Tamil, and more) across scripts, voiceovers, and dubbing reliably, while keeping the product priced competitively against larger, better-funded competitors.",
+    tradeoffs:
+      "Prioritized breadth of AI tooling (analyzer, script generator, dubbing, SEO) over depth in any single feature first, to give creators a single platform rather than another point solution.",
+    outcome:
+      "A shipped, subscription-based product live in production with real creators and testimonials, supporting 15+ languages for voiceovers and 50+ for dubbing.",
+    lessons:
+      "Shipping a real product to paying users surfaces different constraints than infrastructure work — pricing, localization, and creator trust matter as much as the AI pipeline itself.",
+    liveLink: "https://www.gentuber.com/",
+  },
 ];
 
 // Engineering Philosophy — opinionated, not neutral.
@@ -210,6 +230,13 @@ export const openSourceRepos = [
       "AI-assisted Kubernetes optimization control plane — workload classification, explainable recommendations, and pre-action simulation.",
     tags: ["Golang", "Kubernetes", "Prometheus"],
     link: "https://github.com/swarnikaraj/infrapilot-ai",
+  },
+  {
+    name: "swarndb-sdk",
+    description:
+      "Python client SDK for SwarnDB, a high-performance vector database — connection pooling, a chainable query builder for dense, sparse, and tensor search, and DataFrame result conversion.",
+    tags: ["Python", "Vector Database", "Thrift"],
+    link: "https://github.com/swarnikaraj/swarndb-sdk",
   },
   {
     name: "videotranscoder12",

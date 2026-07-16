@@ -2,7 +2,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaChevronDown } from "react-icons/fa";
+import { FaGithub, FaChevronDown, FaExternalLinkAlt } from "react-icons/fa";
 import { caseStudies } from "@/utils/contanst";
 
 const fields = [
@@ -78,16 +78,28 @@ const CaseStudyCard = ({ study, index }) => {
                 </div>
               ))}
             </div>
-            {study.githubLink && (
-              <div className="px-6 pb-6">
-                <a
-                  href={study.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-foreground hover:text-accent transition-colors"
-                >
-                  <FaGithub /> View repository
-                </a>
+            {(study.githubLink || study.liveLink) && (
+              <div className="px-6 pb-6 flex flex-wrap items-center gap-6">
+                {study.githubLink && (
+                  <a
+                    href={study.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-foreground hover:text-accent transition-colors"
+                  >
+                    <FaGithub /> View repository
+                  </a>
+                )}
+                {study.liveLink && (
+                  <a
+                    href={study.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-foreground hover:text-accent transition-colors"
+                  >
+                    <FaExternalLinkAlt size={12} /> View live site
+                  </a>
+                )}
               </div>
             )}
           </motion.div>
