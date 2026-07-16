@@ -55,7 +55,7 @@ const Articles = () => {
           className="flex flex-wrap gap-4"
         >
           <a
-            href="https://swarnnika.hashnode.dev/"
+            href="https://swarnnika.dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-foreground border border-border rounded-md px-5 py-3 hover:border-border-hover transition-colors"
