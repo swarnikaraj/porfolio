@@ -303,16 +303,17 @@ export const beyondCode = [
     description:
       "Veganism isn't a diet — it's a rejection of animal exploitation in food, clothing, and every other form. A daily practice of that belief, not a trend.",
   },
-  {
-    title: "Fitness",
-    description: "Strength training as a discipline — consistency over intensity.",
-  },
+ 
   {
     title: "Generative Math Art",
     description:
       "Algorithmic art built from trigonometric and geometric equations, not photographs — collected as Magic of CosTheta.",
     links: [{ label: "View the collection", url: "https://opensea.io/collection/magic-of-costheta" }],
     image: "/math-art.png",
+  },
+   {
+    title: "Fitness",
+    description: "Strength training as a discipline — consistency over intensity.",
   },
   {
     title: "Poetry",
