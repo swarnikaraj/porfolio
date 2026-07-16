@@ -373,7 +373,7 @@ export const beyondCode = [
     title: "Poetry",
     description:
       "Occasional verses and quiet thoughts, shared without an audience in mind.",
-    links: [{ label: "Read on Instagram", url: "https://www.instagram.com/swarnika.insanevegan" }],
+    links: [{ label: "Read on Instagram", url: "https://www.instagram.com/swarnnika.insanevegan" }],
   },
 ];
 
