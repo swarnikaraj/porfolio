@@ -92,6 +92,26 @@ export const caseStudies = [
     githubLink: "https://github.com/swarnikaraj/infrapilot-ai",
   },
   {
+    id: "rag-memory-service",
+    title: "A Metered Memory Layer for RAG Agents",
+    summary:
+      "A FastAPI memory service for RAG and AI agents that stores conversation and skill memory, metered per API key with rate limiting, real-time balance tracking, and transaction logging.",
+    stack: ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker"],
+    problem:
+      "AI agents need durable memory for conversations and learned skills, but most memory layers have no concept of per-tenant cost, rate limits, or usage accounting — turning memory into an unmetered liability at scale.",
+    architecture:
+      "A FastAPI service exposes conversation and skill memory endpoints behind API-key middleware. Redis holds hot rate-limit counters and key metadata for fast checks, while PostgreSQL persists users, API keys, balances, and transaction logs, with background tasks handling async cost deduction.",
+    challenges:
+      "Keeping Redis (fast, ephemeral) and PostgreSQL (durable, source of truth) consistent for balance and rate-limit state without introducing race conditions under concurrent requests.",
+    tradeoffs:
+      "Split hot-path checks — rate limiting, key validation — into Redis and settled accounting into PostgreSQL, accepting eventual consistency between the two in exchange for low-latency request handling.",
+    outcome:
+      "A deployable, Docker/Railway-ready memory service with working API key management, per-key balance and rate limiting, and separate conversation vs. skill memory models.",
+    lessons:
+      "Metering has to be a first-class part of AI infrastructure design, not an afterthought — cost and rate limits belong in the request path, not a separate reporting pipeline bolted on later.",
+    githubLink: "https://github.com/swarnikaraj/rag-skill-server",
+  },
+  {
     id: "vector-db-platform",
     title: "A Serverless Control Plane for Vector Databases",
     summary:
@@ -237,6 +257,13 @@ export const openSourceRepos = [
       "Python client SDK for SwarnDB, a high-performance vector database — connection pooling, a chainable query builder for dense, sparse, and tensor search, and DataFrame result conversion.",
     tags: ["Python", "Vector Database", "Thrift"],
     link: "https://github.com/swarnikaraj/swarndb-sdk",
+  },
+  {
+    name: "rag-skill-server",
+    description:
+      "Metered memory service for RAG and AI agents — FastAPI, Redis-backed rate limiting, and PostgreSQL-backed balance and transaction tracking.",
+    tags: ["Python", "FastAPI", "Redis", "PostgreSQL"],
+    link: "https://github.com/swarnikaraj/rag-skill-server",
   },
   {
     name: "videotranscoder12",
